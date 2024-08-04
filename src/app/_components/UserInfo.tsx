@@ -6,9 +6,9 @@ import Image from "next/image";
 
 const LoadingState = () => {
   return (
-    <div className="flex w-full gap-4 items-center justify-start animate-pulse opacity-50">
-      <div className="inline-block bg-slate-100 h-20 w-20 rounded-full" />
-      <div className="bg-slate-100 w-48 h-4 rounded-md" />
+    <div className="flex w-full gap-4 items-center justify-start animate-pulse">
+      <div className="inline-block bg-slate-700 h-20 w-20 rounded-full" />
+      <div className="bg-slate-700 w-48 h-4 rounded-md" />
     </div>
   );
 };
