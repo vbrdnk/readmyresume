@@ -1,14 +1,10 @@
-import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 
 import { TRPCReactProvider } from "@/trpc/react";
+
+import Header from "@/components/Header";
 
 import "@/styles/globals.css";
 
@@ -24,15 +20,8 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" className={`${GeistSans.variable}`}>
-        <body>
-          <header>
-            <SignedOut>
-              <SignInButton />
-            </SignedOut>
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
-          </header>
+        <body className="bg-gradient-to-br from-slate-700 to-stone-800">
+          <Header />
           <TRPCReactProvider>{children}</TRPCReactProvider>
         </body>
       </html>
